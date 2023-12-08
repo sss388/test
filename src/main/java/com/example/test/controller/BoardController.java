@@ -51,7 +51,7 @@ public class BoardController {
         boardService.deletePost(id);
     }
 
-    //글 불러오기
+    //글 page별로 글 불러오기
     @GetMapping("/read")
     public List<Post> readBoard(@RequestParam(value = "page", defaultValue = "1") int page) {
         return boardService.getPosts(page);
